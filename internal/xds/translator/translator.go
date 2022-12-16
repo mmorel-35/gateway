@@ -87,7 +87,7 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 			if len(httpRoute.Destinations) == 0 && httpRoute.BackendWeights.Invalid > 0 {
 				continue
 			}
-			xdsCluster, err := buildXdsCluster(httpRoute.Name, httpRoute.Destinations, httpListener.IsHTTP2)
+			xdsCluster := buildXdsCluster(httpRoute.Name, httpRoute.Destinations, httpListener.IsHTTP2)
 			tCtx.AddXdsResource(resource.ClusterType, xdsCluster)
 
 		}
