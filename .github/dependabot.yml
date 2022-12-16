@@ -13,6 +13,10 @@ updates:
     directory: /
     schedule:
       interval: weekly
+  - package-ecosystem: pip
+    directory: /tools/src/codespell
+    schedule:
+      interval: weekly
   - package-ecosystem: gomod
     directory: /tools/src/controller-gen
     schedule:
@@ -35,5 +39,9 @@ updates:
       interval: weekly
   - package-ecosystem: pip
     directory: /tools/src/sphinx-build
+    schedule:
+      interval: weekly
+  - package-ecosystem: pip
+    directory: /tools/src/yamllint
     schedule:
       interval: weekly
