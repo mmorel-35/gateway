@@ -97,10 +97,7 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 
 	for _, tcpListener := range ir.TCP {
 		// 1:1 between IR TCPListener and xDS Cluster
-		xdsCluster, err := buildXdsCluster(tcpListener.Name, tcpListener.Destinations, false /*isHTTP2 */)
-		if err != nil {
-			return nil, multierror.Append(err, errors.New("error building xds cluster"))
-		}
+		xdsCluster := buildXdsCluster(tcpListener.Name, tcpListener.Destinations, false /*isHTTP2 */)
 		tCtx.AddXdsResource(resource.ClusterType, xdsCluster)
 
 		// Search for an existing listener, if it does not exist, create one.
@@ -117,10 +114,7 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 
 	for _, udpListener := range ir.UDP {
 		// 1:1 between IR UDPListener and xDS Cluster
-		xdsCluster, err := buildXdsCluster(udpListener.Name, udpListener.Destinations, false /*isHTTP2 */)
-		if err != nil {
-			return nil, multierror.Append(err, errors.New("error building xds cluster"))
-		}
+		xdsCluster := buildXdsCluster(udpListener.Name, udpListener.Destinations, false /*isHTTP2 */)
 		tCtx.AddXdsResource(resource.ClusterType, xdsCluster)
 
 		// There won't be multiple UDP listeners on the same port since it's already been checked at the gateway api
