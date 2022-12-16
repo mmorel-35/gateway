@@ -106,10 +106,7 @@ func addXdsHTTPFilterChain(xdsListener *listener.Listener, irListener *ir.HTTPLi
 	}
 
 	if irListener.TLS != nil {
-		tSocket, err := buildXdsDownstreamTLSSocket(irListener.Name, irListener.TLS)
-		if err != nil {
-			return err
-		}
+		tSocket := buildXdsDownstreamTLSSocket(irListener.Name, irListener.TLS)
 		filterChain.TransportSocket = tSocket
 		if err := addServerNamesMatch(xdsListener, filterChain, irListener.Hostnames); err != nil {
 			return err
