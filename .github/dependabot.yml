@@ -14,7 +14,7 @@ updates:
     schedule:
       interval: weekly
   - package-ecosystem: gomod
-    directory: /tools/src/controller-
+    directory: /tools/src/controller-gen
     schedule:
       interval: weekly
   - package-ecosystem: gomod
