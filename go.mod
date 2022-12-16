@@ -6,7 +6,7 @@ require (
 	github.com/cncf/xds/go v0.0.0-20220314180256-7f1daf1720fc
 	github.com/envoyproxy/go-control-plane v0.10.3-0.20221028143534-ed9652aebfd9
 	github.com/go-logr/zapr v1.2.0
-	github.com/google/go-cmp v0.5.8
+	github.com/google/go-cmp v0.5.9
 	github.com/spf13/cobra v1.4.0
 	github.com/stretchr/testify v1.8.0
 	github.com/telepresenceio/watchable v0.0.0-20220726211108-9bb86f92afa7
