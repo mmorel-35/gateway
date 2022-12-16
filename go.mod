@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/cncf/xds/go v0.0.0-20220314180256-7f1daf1720fc
 	github.com/envoyproxy/go-control-plane v0.10.3-0.20221028143534-ed9652aebfd9
-	github.com/go-logr/zapr v1.2.0
+	github.com/go-logr/zapr v1.2.3
 	github.com/google/go-cmp v0.5.9
 	github.com/spf13/cobra v1.4.0
 	github.com/stretchr/testify v1.8.0
@@ -28,7 +28,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/emicklei/go-restful v2.9.5+incompatible // indirect
 	github.com/evanphx/json-patch v4.12.0+incompatible // indirect
-	github.com/go-logr/logr v1.2.0
+	github.com/go-logr/logr v1.2.2
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
