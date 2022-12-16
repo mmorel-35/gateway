@@ -67,10 +67,7 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 
 		// 1:1 between IR TLSListenerConfig and xDS Secret
 		if httpListener.TLS != nil {
-			secret, err := buildXdsDownstreamTLSSecret(httpListener.Name, httpListener.TLS)
-			if err != nil {
-				return nil, multierror.Append(err, errors.New("error building xds listener tls secret"))
-			}
+			secret := buildXdsDownstreamTLSSecret(httpListener.Name, httpListener.TLS)
 			tCtx.AddXdsResource(resource.SecretType, secret)
 		}
 
@@ -83,10 +80,7 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 
 		for _, httpRoute := range httpListener.Routes {
 			// 1:1 between IR HTTPRoute and xDS config.route.v3.Route
-			xdsRoute, err := buildXdsRoute(httpRoute)
-			if err != nil {
-				return nil, multierror.Append(err, errors.New("error building xds route"))
-			}
+			xdsRoute := buildXdsRoute(httpRoute)
 			vHost.Routes = append(vHost.Routes, xdsRoute)
 
 			// Skip trying to build an IR cluster if the httpRoute only has invalid backends
@@ -94,9 +88,6 @@ func Translate(ir *ir.Xds) (*types.ResourceVersionTable, error) {
 				continue
 			}
 			xdsCluster, err := buildXdsCluster(httpRoute.Name, httpRoute.Destinations, httpListener.IsHTTP2)
-			if err != nil {
-				return nil, multierror.Append(err, errors.New("error building xds cluster"))
-			}
 			tCtx.AddXdsResource(resource.ClusterType, xdsCluster)
 
 		}
