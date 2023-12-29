@@ -22,7 +22,7 @@ jobs:
       pull-requests: write
       actions: write
     steps:
-    - uses: envoyproxy/toolshed/gh-actions/github/command@actions-v0.2.18
+    - uses: envoyproxy/toolshed/gh-actions/github/command@actions-v0.2.20
       name: Parse command from comment
       id: command
       with:
