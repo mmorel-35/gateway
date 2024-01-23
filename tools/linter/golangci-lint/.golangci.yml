@@ -67,7 +67,6 @@ linters-settings:
       - compares
       - float-compare
       - go-require
-      - require-error
     enable:
       - bool-compare
       - empty
@@ -75,6 +74,7 @@ linters-settings:
       - error-nil
       - expected-actual
       - len
+      - require-error
       - suite-dont-use-pkg
       - suite-extra-assert-call
   unparam:
