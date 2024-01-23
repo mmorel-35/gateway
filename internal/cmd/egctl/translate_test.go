@@ -320,7 +320,7 @@ func TestTranslate(t *testing.T) {
 			if tc.expect {
 				require.NoError(t, root.ExecuteContext(context.Background()))
 			} else {
-				assert.Error(t, root.ExecuteContext(context.Background()))
+				require.Error(t, root.ExecuteContext(context.Background()))
 				return
 			}
 
