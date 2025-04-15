@@ -60,7 +60,7 @@ require (
 	go.opentelemetry.io/proto/otlp v1.5.0
 	go.uber.org/zap v1.27.0
 	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
-	golang.org/x/net v0.37.0
+	golang.org/x/net v0.38.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20250218202821-56aae31c358a
 	google.golang.org/grpc v1.71.0
 	google.golang.org/protobuf v1.36.5
@@ -68,14 +68,14 @@ require (
 	helm.sh/helm/v3 v3.17.2
 	k8s.io/api v0.32.3
 	k8s.io/apiextensions-apiserver v0.32.3
-	k8s.io/apimachinery v0.33.0-beta.0
+	k8s.io/apimachinery v0.34.0-alpha.0
 	k8s.io/cli-runtime v0.32.3
 	k8s.io/client-go v0.32.3
 	k8s.io/klog/v2 v2.130.1
-	k8s.io/kube-openapi v0.0.0-20250304201544-e5f78fe3ede9
+	k8s.io/kube-openapi v0.0.0-20250318190949-c8a335a9a2ff
 	k8s.io/kubectl v0.32.3
 	k8s.io/utils v0.0.0-20241210054802-24370beab758
-	sigs.k8s.io/controller-runtime v0.20.3
+	sigs.k8s.io/controller-runtime v0.20.4
 	sigs.k8s.io/gateway-api v1.2.1
 	sigs.k8s.io/kubectl-validate v0.0.5-0.20241223122011-eb064d2f92d5
 	sigs.k8s.io/mcs-api v0.1.0
