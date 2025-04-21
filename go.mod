@@ -3,7 +3,7 @@ module github.com/envoyproxy/gateway
 go 1.24.2
 
 require (
-	fortio.org/fortio v1.69.1
+	fortio.org/fortio v1.69.3
 	fortio.org/log v1.17.2
 	github.com/AdaLogics/go-fuzz-headers v0.0.0-20230811130428-ced1acdcaa24
 	github.com/Masterminds/semver/v3 v3.3.1
