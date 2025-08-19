@@ -1,4 +1,4 @@
-FROM busybox@sha256:37f7b378a29ceb4c551b1b5582e27747b855bbfaa73fa11914fe0df028dc581f AS source
+FROM busybox@sha256:ab33eacc8251e3807b85bb6dba570e4698c3998eca6f0fc2ccb60575a563ea74 AS source
 # Create the data directory for eg
 RUN mkdir -p /var/lib/eg
 
